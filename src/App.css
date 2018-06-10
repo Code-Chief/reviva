@@ -11,15 +11,29 @@
   position: relative;
   width: 100%;
   height: 100%; }
+  @media (min-width: 375px) {
+    .App-body {
+      flex-direction: column; } }
   .App-body .App-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end; }
+    @media (min-width: 375px) {
+      .App-body .App-left {
+        width: 100%;
+        padding: 2px; } }
     .App-body .App-left .App-content {
       width: 75%;
       display: flex;
       flex-direction: column; }
+      @media (min-width: 375px) {
+        .App-body .App-left .App-content {
+          width: 100%; } }
+    @media (min-width: 375px) {
+      .App-body .App-left .ui.input {
+        font-size: 15px;
+        width: 255px; } }
     .App-body .App-left .ui.input input {
       background-color: #dedede; }
     .App-body .App-left .ui.input button {
@@ -33,6 +47,9 @@
       margin-top: 20px;
       margin-bottom: 20px;
       width: 45%; }
+      @media (min-width: 375px) {
+        .App-body .App-left .App-submitText {
+          width: 65%; } }
     .App-body .App-left .App-store-container {
       display: flex; }
       .App-body .App-left .App-store-container img {
@@ -40,25 +57,55 @@
         height: 55.5px;
         margin: 15px;
         margin-left: 0px; }
+        @media (min-width: 375px) {
+          .App-body .App-left .App-store-container img {
+            width: 92.75px;
+            height: 27.75px; } }
 
-.App-logo {
-  height: 69px;
-  margin: 20px;
-  margin-left: 100px; }
+@media (min-width: 375px) {
+  .App-logo {
+    margin: 5px;
+    height: 35px; } }
+
+@media (min-width: 992px) {
+  .App-logo {
+    height: 69px;
+    margin: 20px;
+    margin-left: 100px; } }
+
+@media (min-width: 768px) {
+  .App-logo {
+    height: 69px;
+    margin: 20px;
+    margin-left: 100px; } }
 
 .App-header {
   background-color: #fff;
   display: flex;
   height: 70px;
   color: white; }
+  @media (min-width: 375px) {
+    .App-header {
+      height: 25px; } }
 
 .App-space {
   width: 50%;
   height: 100%; }
+  @media (min-width: 375px) {
+    .App-space {
+      width: 100%; } }
 
-.App-phone {
+@media (min-width: 375px) {
+  .App-right {
+    display: flex; } }
+
+.App-right .App-phone {
   width: 50%;
   margin: 25%; }
+  @media (min-width: 375px) {
+    .App-right .App-phone {
+      width: 270px;
+      margin: 0px; } }
 
 .App-title {
   font-size: 1.5em; }

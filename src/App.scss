@@ -1,3 +1,48 @@
+$screen-sm-phone: 375px;
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+
+@mixin phone {
+  @media (min-width: #{$screen-sm-phone}) {
+    @content;
+  }
+}
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
 .App {
   position: absolute;
   width: 100%;
@@ -14,19 +59,35 @@
   width: 100%;
   height: 100%;
 
+  @include phone {
+    flex-direction: column;
+  }
+
   .App-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
 
+  @include phone {
+    width: 100%;
+    padding: 2px;
+  }
     .App-content {
       width: 75%;
       display: flex;
       flex-direction: column;
+      @include phone {
+        width: 100%;
+      }
     }
 
     .ui.input {
+      @include phone {
+        font-size: 15px;
+        width: 255px;
+      }
+
       input {
         background-color: rgb(222,222,222);
       }
@@ -47,6 +108,10 @@
       margin-top: 20px;
       margin-bottom: 20px;
       width: 45%;
+
+      @include phone {
+        width: 65%;
+      }
     }
 
     .App-store-container {
@@ -57,6 +122,11 @@
         height: 55.5px;
         margin: 15px;
         margin-left: 0px;
+
+        @include phone {
+          width: 92.75px;
+          height: 27.75px;
+        }
       }
     }
   }
@@ -64,9 +134,20 @@
 
 
 .App-logo {
-  height: 69px;
-  margin: 20px;
-  margin-left: 100px;
+  @include phone {
+    margin: 5px;
+    height: 35px;
+  }
+  @include lg {
+    height: 69px;
+    margin: 20px;
+    margin-left: 100px;
+  }
+  @include md {
+    height: 69px;
+    margin: 20px;
+    margin-left: 100px;
+  }
 }
 
 .App-header {
@@ -74,15 +155,33 @@
   display: flex;
   height: 70px;
   color: white;
+
+  @include phone {
+    height: 25px;
+  }
 }
 
 .App-space {
   width: 50%;
   height: 100%;
+
+  @include phone {
+    width: 100%;
+  }
 }
-.App-phone {
-  width: 50%;
-  margin: 25%;
+
+.App-right {
+    @include phone {
+      display: flex;
+    }
+  .App-phone {
+    width: 50%;
+    margin: 25%;
+    @include phone {
+      width: 270px;
+      margin: 0px;
+    }
+  }
 }
 
 .App-title {
