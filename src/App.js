@@ -4,6 +4,8 @@ import logo from './logo.png';
 import phone from './phone.png';
 import comingSoon from './coming-soon.png';
 import submitText from './submit-text.png';
+import iosButton from './Ios-button.png';
+import androidButton from './android-button.png';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
@@ -71,21 +73,27 @@ class App extends Component {
         </header>
         <div className="App-body">
           <div className="App-left App-space">
-            <img src={comingSoon} className="App-comingSoon" />
-            <img src={submitText} className="App-submitText" />
-            <Input
-              ref={this.handleRef}
-              onChange={this.updateEmail}
-              value={this.state.email}
-              loading={this.state.isLoading}
-              size='big'
-              action={
-                <Button onClick={this.handleSignUp} icon>
-                  <Icon name='arrow right'/>
-                </Button>
-              }
-              placeholder='Email'
-            />
+            <div className="App-content">
+              <img src={comingSoon} className="App-comingSoon" />
+              <div className="App-store-container">
+                <img src={iosButton} className="App-iosButton" />
+                <img src={androidButton} className="App-androidButton" />
+              </div>
+              <img src={submitText} className="App-submitText" />
+              <Input
+                ref={this.handleRef}
+                onChange={this.updateEmail}
+                value={this.state.email}
+                loading={this.state.isLoading}
+                size='big'
+                action={
+                  <Button onClick={this.handleSignUp} icon>
+                    <Icon name='arrow right'/>
+                  </Button>
+                }
+                placeholder='Email'
+              />
+            </div>
           </div>
           <div className="App-right App-space">
             <img src={phone} className="App-phone" alt="phone" />
