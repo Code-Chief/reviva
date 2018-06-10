@@ -2,64 +2,65 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  text-align: center;
-}
+  text-align: center; }
+  .App .ui.input {
+    left: -55px; }
+    .App .ui.input input {
+      background-color: #dedede; }
+    .App .ui.input button {
+      background-color: #acacac; }
+      .App .ui.input button i {
+        color: white; }
 
 .App-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .App-comingSoon {
-  width: 45%;
-}
+  width: 45%; }
+
 .App-submitText {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 45%;
-}
+  width: 45%; }
 
 .App-logo {
   height: 69px;
   margin: 20px;
-  margin-left: 100px;
-}
+  margin-left: 100px; }
 
 .App-header {
   background-color: #fff;
   display: flex;
   height: 70px;
-  color: white;
-}
+  color: white; }
 
 .App-body {
-  background: url('/background.png');
+  background: url("/background.png");
   display: flex;
   background-position-y: -100px;
   position: relative;
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
+
 .App-space {
   width: 50%;
-  height: 100%;
-}
+  height: 100%; }
+
 .App-phone {
   width: 50%;
-  margin: 25%;
-}
+  margin: 25%; }
 
 .App-title {
-  font-size: 1.5em;
-}
+  font-size: 1.5em; }
 
 .App-intro {
-  font-size: large;
-}
+  font-size: large; }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
